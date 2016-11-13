@@ -528,7 +528,7 @@ class HttpResponse(object):
             if isinstance(value, unicode):
                 try:
                     value = value.encode('us-ascii')
-                except UnicodeError, e:
+                except UnicodeError:
                     e.reason += ', HTTP response headers must be in US-ASCII format'
                     raise
             else:

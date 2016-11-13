@@ -529,7 +529,7 @@ class HttpResponse(object):
                 try:
                     value = value.encode('us-ascii')
                 except UnicodeError:
-                    e.reason += ', HTTP response headers must be in US-ASCII format'
+                    e.reason += 'HTTP response headers must be in US-ASCII format'
                     raise
             else:
                 value = str(value)
